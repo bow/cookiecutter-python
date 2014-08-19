@@ -1,5 +1,19 @@
 # -*- coding: utf-8 -*-
+"""
+    {{ cookiecutter.repo_name }}
+    ~~~
 
-__author__ = '{{ cookiecutter.full_name }}'
-__email__ = '{{ cookiecutter.email }}'
-__version__ = '{{ cookiecutter.version }}'
+    :copyright: (c) {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
+    :license: BSD
+
+"""
+
+RELEASE = False
+
+__version_info__ = ("0", "1", "0")
+__version__ = ".".join(__version_info__)
+__version__ += "-dev" if not RELEASE else ""
+
+__author__ = "{{ cookiecutter.full_name }}"
+__contact__ = "{{ cookiecutter.email }}"
+__homepage__ = "{{ cookiecutter.homepage }}"

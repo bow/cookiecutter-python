@@ -1,54 +1,37 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from setuptools import find_packages, setup
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+from {{ cookiecutter.repo_name }} import __author__, __contact__, \
+        __homepage__, __version__
 
 
-readme = open('README.rst').read()
-history = open('HISTORY.rst').read().replace('.. :changelog:', '')
+with open("README.rst") as src:
+    readme = src.read()
+with open("HISTORY.rst") as src:
+    history = src.read().replace(".. :changelog:", "")
 
-requirements = [
-    # TODO: put package requirements here
-]
+with open("requirements.txt") as src:
+    requirements = [line.strip() for line in src]
+with open("requirements-dev.txt") as src:
+    test_requirements = [line.strip() for line in src]
 
-test_requirements = [
-    # TODO: put package test requirements here
-]
 
 setup(
-    name='{{ cookiecutter.repo_name }}',
-    version='{{ cookiecutter.version }}',
-    description='{{ cookiecutter.project_short_description }}',
-    long_description=readme + '\n\n' + history,
-    author='{{ cookiecutter.full_name }}',
-    author_email='{{ cookiecutter.email }}',
-    url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
-    packages=[
-        '{{ cookiecutter.repo_name }}',
-    ],
-    package_dir={'{{ cookiecutter.repo_name }}':
-                 '{{ cookiecutter.repo_name }}'},
+    name="{{ cookiecutter.repo_name }}",
+    version=__version__,
+    description="{{ cookiecutter.project_short_description }}",
+    long_description=readme + "\n\n" + history,
+    author=__author__,
+    author_email=__contact__,
+    url=__homepage__,
+    packages=find_packages(),
     include_package_data=True,
     install_requires=requirements,
+    test_suite="nose.collector",
     license="BSD",
     zip_safe=False,
-    keywords='{{ cookiecutter.repo_name }}',
-    classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
-        'Natural Language :: English',
-        "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.6',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
-    ],
-    test_suite='tests',
+    keywords="{{ cookiecutter.repo_name }}",
     tests_require=test_requirements
 )
