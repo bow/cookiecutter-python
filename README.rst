@@ -6,10 +6,10 @@ Opinionated cookiecutter template for a Python package, based on
 https://github.com/audreyr/cookiecutter.
 
 * Free software: BSD license
-* Vanilla testing setup with `unittest` and `python setup.py test`
-* Travis-CI_: Ready for Travis Continuous Integration testing
-* Tox_ testing: Setup to easily test for Python 2.7, 3.3, 3.4
-* Sphinx_ docs: Documentation ready for generation with, for example, ReadTheDocs_
+* Testing setup with `pytest`
+* Travis-CI: Ready for Travis Continuous Integration testing
+* Tox: Setup to easily test for Python 2.7, 3.3, 3.4
+* Sphinx docs: Documentation ready for generation with, for example, ReadTheDocs
 
 Usage
 -----

@@ -1,2 +1,2 @@
-future==0.13.0
-wheel==0.23.0
+future
+wheel

@@ -1,23 +1,11 @@
-===============================
 {{ cookiecutter.project_name }}
 ===============================
-
-.. image:: https://badge.fury.io/py/{{ cookiecutter.repo_name }}.png
-    :target: http://badge.fury.io/py/{{ cookiecutter.repo_name }}
 
 .. image:: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.png?branch=master
         :target: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
 
-.. image:: https://pypip.in/d/{{ cookiecutter.repo_name }}/badge.png
-        :target: https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}
+.. image:: https://coveralls.io/repos/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/badge.svg?branch=master&service=github
+        :target: https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}?branch=master
 
 
 {{ cookiecutter.project_short_description}}
-
-* Free software: BSD license
-* Documentation: https://{{ cookiecutter.repo_name }}.readthedocs.org.
-
-Features
---------
-
-* TODO
