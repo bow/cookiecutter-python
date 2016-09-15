@@ -1,0 +1,22 @@
+include AUTHORS.rst
+include HISTORY.rst
+include README.rst
+include MANIFEST.in
+include LICENSE
+include requirements.txt
+include requirements-dev.txt
+include .coveragerc
+
+recursive-include {{ cookiecutter.project_slug }} *
+recursive-include docs
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * *.log
+recursive-exclude * *.swp
+recursive-exclude . .coverage
+recursive-exclude . htmlcov
+
+prune .travis.yml
+prune .tox
+

@@ -4,7 +4,10 @@
   "homepage": "http://bow.web.id",
   "github_username": "bow",
   "project_name": "Project",
-  "repo_name": "repo",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
   "project_short_description": "",
+  "use_travis": true,
+  "use_codecov": true,
+  "has_cli": true,
   "year": "2016"
 }
