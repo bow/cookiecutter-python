@@ -9,5 +9,6 @@
   "use_travis": true,
   "use_codecov": true,
   "has_cli": true,
+  "license": ["BSD 3-Clause", "MIT", "Apache 2.0", "not open"],
   "year": "2016"
 }
