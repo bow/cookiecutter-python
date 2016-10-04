@@ -5,10 +5,9 @@ cookiecutter-pypkg
 Opinionated cookiecutter template for a Python package, based on
 https://github.com/audreyr/cookiecutter.
 
-* Free software: BSD license
+* Multiple license to choose from: BSD 3-Clause, MIT, Apache 2.0, or Proprietary
 * Testing setup with `pytest`
 * Travis-CI: Ready for Travis Continuous Integration testing
-* Tox: Setup to easily test for Python 2.7, 3.3, 3.4
 * Sphinx docs: Documentation ready for generation with, for example, ReadTheDocs
 
 Usage

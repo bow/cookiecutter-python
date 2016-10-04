@@ -39,15 +39,22 @@ setup(
         ]
     },
     {%- endif %}
-    license="BSD",
     zip_safe=False,
     keywords="{{ cookiecutter.project_slug }}",
     tests_require=test_requirements,
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Console",
-        "License :: OSI Approved :: BSD License",
         "Operating System :: POSIX",
         "Programming Language :: Python :: 3.5",
+        {%- if cookiecutter.license == "BSD 3-Clause" %}
+        "License :: OSI Approved :: BSD License",
+        {%- elif cookiecutter.license == "MIT" %}
+        "License :: OSI Approved :: Apache Software License",
+        {%- elif cookiecutter.license == "Apache 2.0" %}
+        "License :: OSI Approved :: MIT License",
+        {%- else %}
+        "License :: Other/Proprietary License",
+        {%- endif %}
     ],
 )

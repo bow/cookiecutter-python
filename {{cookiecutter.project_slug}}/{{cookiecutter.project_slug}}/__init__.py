@@ -3,8 +3,8 @@
     {{ cookiecutter.project_slug }}
     ~~~
 
-    :copyright: (c) {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
-    :license: BSD
+    :copyright: (c) {% now 'local', '%Y' %} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
+    :license: {{ cookiecutter.license }}
 
 """
 
