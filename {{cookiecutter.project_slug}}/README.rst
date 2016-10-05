@@ -1,5 +1,5 @@
 {{ cookiecutter.project_name }}
-===============================
+{{ '=' * cookiecutter.project_name|length }}
 
 {% if cookiecutter.use_travis %}
 .. image:: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.png?branch=master
