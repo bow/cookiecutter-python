@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    {{ cookiecutter.project_slug }}
-    {{ '~' * cookiecutter.project_slug|length }}
+    {{ cookiecutter.pkg_name }}
+    {{ '~' * cookiecutter.pkg_name | length }}
 
     :copyright: (c) {% now 'local', '%Y' %} {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
     :license: {{ cookiecutter.license }}

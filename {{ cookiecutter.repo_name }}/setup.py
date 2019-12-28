@@ -3,7 +3,7 @@
 
 from setuptools import find_packages, setup
 
-from {{ cookiecutter.project_slug }} import __author__, __contact__, \
+from {{ cookiecutter.pkg_name }} import __author__, __contact__, \
         __homepage__, __version__
 
 
@@ -21,7 +21,7 @@ with open("requirements-dev.txt") as src:
 
 
 setup(
-    name="{{ cookiecutter.project_slug }}",
+    name="{{ cookiecutter.pkg_name }}",
     version=__version__,
     description="{{ cookiecutter.project_short_description }}",
     long_description=readme + "\n\n" + history,
@@ -32,15 +32,15 @@ setup(
                                     "tests.*", "tests"]),
     include_package_data=True,
     install_requires=requirements,
-    {%- if not 'no' in cookiecutter.has_cli|lower %}
+    {%- if not 'no' in cookiecutter.has_cli | lower %}
     entry_points={
         "console_scripts": [
-            "{{ cookiecutter.project_slug }}={{ cookiecutter.project_slug }}.cli:main"
+            "{{ cookiecutter.pkg_name }}={{ cookiecutter.pkg_name }}.cli:main"
         ]
     },
     {%- endif %}
     zip_safe=False,
-    keywords="{{ cookiecutter.project_slug }}",
+    keywords="{{ cookiecutter.pkg_name }}",
     tests_require=test_requirements,
     classifiers=[
         "Development Status :: 3 - Alpha",

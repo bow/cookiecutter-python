@@ -15,7 +15,7 @@ install:
     - pip install coveralls --use-wheel
 
 script:
-    - py.test -v --flake8 --cov-config .coveragerc --cov {{ cookiecutter.project_slug }}
+    - py.test -v --flake8 --cov-config .coveragerc --cov {{ cookiecutter.pkg_name }}
 
 after_success:
     - coveralls
