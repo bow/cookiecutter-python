@@ -2,10 +2,12 @@
 # -*- coding: utf-8 -*-
 # {{ cookiecutter.copyright_notice }}
 
+import versioneer
 from setuptools import find_packages, setup
+
 from typing import List
 
-from {{ cookiecutter.pkg_name }} import __author__, __contact__, __homepage__, __version__
+from {{ cookiecutter.pkg_name }} import __author__, __contact__, __homepage__
 
 
 def parse_requirements(fname: str) -> List[str]:
@@ -30,7 +32,8 @@ dev_requirements = parse_requirements("requirements-dev.txt")
 
 setup(
     name="{{ cookiecutter.pkg_name }}",
-    version=__version__,
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     description="{{ cookiecutter.project_short_description }}",
     long_description=readme + "\n\n" + history,
     author=__author__,
