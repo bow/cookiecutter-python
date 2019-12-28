@@ -4,6 +4,7 @@
   "homepage": "http://bow.web.id",
   "github_username": "bow",
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "repo_url": "git@github.com:{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git",
   "project_name": "Project",
   "project_short_description": "",
   "pkg_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
