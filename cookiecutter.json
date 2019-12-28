@@ -1,6 +1,6 @@
 {
-  "full_name": "Wibowo Arindrarto",
-  "email": "bow@bow.web.id",
+  "author_full_name": "Wibowo Arindrarto",
+  "author_email": "bow@bow.web.id",
   "homepage": "http://bow.web.id",
   "github_username": "bow",
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",

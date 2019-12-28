@@ -56,7 +56,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'{{ cookiecutter.project_name }}'
-copyright = u"{% now 'local', '%Y' %}, {{ cookiecutter.full_name }}"
+copyright = u"{% now 'local', '%Y' %}, {{ cookiecutter.author_full_name }}"
 
 # The version info for the project you're documenting, acts as replacement
 # for |version| and |release|, also used in various other places throughout
@@ -210,7 +210,7 @@ latex_elements = {
 latex_documents = [
     ('index', '{{ cookiecutter.pkg_name }}.tex',
      u'{{ cookiecutter.project_name }} Documentation',
-     u'{{ cookiecutter.full_name }}', 'manual'),
+     u'{{ cookiecutter.author_full_name }}', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at
@@ -241,7 +241,7 @@ latex_documents = [
 man_pages = [
     ('index', '{{ cookiecutter.pkg_name }}',
      u'{{ cookiecutter.project_name }} Documentation',
-     [u'{{ cookiecutter.full_name }}'], 1)
+     [u'{{ cookiecutter.author_full_name }}'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -256,7 +256,7 @@ man_pages = [
 texinfo_documents = [
     ('index', '{{ cookiecutter.pkg_name }}',
      u'{{ cookiecutter.project_name }} Documentation',
-     u'{{ cookiecutter.full_name }}',
+     u'{{ cookiecutter.author_full_name }}',
      '{{ cookiecutter.pkg_name }}',
      'One line description of project.',
      'Miscellaneous'),
