@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# {{ cookiecutter.copyright_notice }}
 
 from setuptools import find_packages, setup
 

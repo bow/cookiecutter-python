@@ -10,5 +10,6 @@
   "use_travis": true,
   "use_codecov": true,
   "has_cli": true,
-  "license": ["BSD 3-Clause", "MIT", "Apache 2.0", "Proprietary"]
+  "license": ["BSD 3-Clause", "MIT", "Apache 2.0", "Proprietary"],
+  "copyright_notice": "Copyright (c) {% now 'local', '%Y' %} {{ cookiecutter.author_full_name }}"
 }

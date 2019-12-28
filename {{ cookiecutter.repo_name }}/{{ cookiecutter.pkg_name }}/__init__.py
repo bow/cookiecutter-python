@@ -7,6 +7,7 @@
     :license: {{ cookiecutter.license }}
 
 """
+#  {{ cookiecutter.copyright_notice }}
 
 RELEASE = False
 
