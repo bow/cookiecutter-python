@@ -17,4 +17,4 @@ __version__ += "-dev" if not RELEASE else ""
 
 __author__ = "{{ cookiecutter.author_full_name }}"
 __contact__ = "{{ cookiecutter.author_email }}"
-__homepage__ = "{{ cookiecutter.homepage }}"
+__homepage__ = "{{ cookiecutter.project_homepage }}"
