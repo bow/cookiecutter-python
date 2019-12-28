@@ -3,9 +3,19 @@
 # {{ cookiecutter.copyright_notice }}
 
 from setuptools import find_packages, setup
+from typing import List
 
-from {{ cookiecutter.pkg_name }} import __author__, __contact__, \
-        __homepage__, __version__
+from {{ cookiecutter.pkg_name }} import __author__, __contact__, __homepage__, __version__
+
+
+def parse_requirements(fname: str) -> List[str]:
+    """Extracts a list of dependencies from the given requirements file."""
+    with open(fname) as src:
+        return [
+            line
+            for line in (rl.strip() for rl in src)
+            if line and not line.startswith("-e") and not line.startswith("#")
+        ]
 
 
 with open("README.rst") as src:
@@ -14,11 +24,8 @@ with open("README.rst") as src:
 with open("HISTORY.rst") as src:
     history = src.read().replace(".. :changelog:", "").strip()
 
-with open("requirements.txt") as src:
-    requirements = [line.strip() for line in src]
-
-with open("requirements-dev.txt") as src:
-    test_requirements = [line.strip() for line in src]
+requirements = parse_requirements("requirements.txt")
+dev_requirements = parse_requirements("requirements-dev.txt")
 
 
 setup(
@@ -29,10 +36,13 @@ setup(
     author=__author__,
     author_email=__contact__,
     url=__homepage__,
-    packages=find_packages(exclude=["*.tests", "*.tests.*",
-                                    "tests.*", "tests"]),
+    packages=find_packages(
+        exclude=["*.tests", "*.tests.*", "tests.*", "tests"]
+    ),
     include_package_data=True,
     install_requires=requirements,
+    tests_require=dev_requirements,
+    extras_require={"dev": dev_requirements },
     {%- if not 'no' in cookiecutter.has_cli | lower %}
     entry_points={
         "console_scripts": [
@@ -42,11 +52,8 @@ setup(
     {%- endif %}
     zip_safe=False,
     keywords="{{ cookiecutter.pkg_name }}",
-    tests_require=test_requirements,
     classifiers=[
         "Development Status :: 3 - Alpha",
-        "Environment :: Console",
-        "Operating System :: POSIX",
         "Programming Language :: Python :: {{ cookiecutter.python_version.split('.')[:2] | join('.') }}",
         {%- if cookiecutter.license == "BSD 3-Clause" %}
         "License :: OSI Approved :: BSD License",
