@@ -47,7 +47,7 @@ setup(
         "Development Status :: 3 - Alpha",
         "Environment :: Console",
         "Operating System :: POSIX",
-        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: {{ cookiecutter.python_version.split('.')[:2] | join('.') }}",
         {%- if cookiecutter.license == "BSD 3-Clause" %}
         "License :: OSI Approved :: BSD License",
         {%- elif cookiecutter.license == "MIT" %}

@@ -3,9 +3,7 @@
 language: python
 
 python:
-  - "3.4"
-  - "3.3"
-  - "2.7"
+  - "{{ cookiecutter.python_version.split('.')[:2] | join('.') }}"
 
 before_install:
     - pip install -r requirements-dev.txt

@@ -16,7 +16,7 @@
 Requirements
 ------------
 
-* Python 3.5
+* Python {{ cookiecutter.python_version.split('.')[:2] | join('.') }}
 
 
 Development Setup
